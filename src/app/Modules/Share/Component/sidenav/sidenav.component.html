@@ -1,0 +1,53 @@
+
+<div>
+  <!--EMPIEZA TOOLBAR-->
+  <mat-toolbar color="primary">
+
+    <h1 class="app"></h1>
+    <!--<div class="button">
+        <ul>
+          <li>
+            <button mat-raised-button color="primary">Primary</button>&nbsp;&nbsp;
+            <button mat-raised-button color="primary">Second</button>&nbsp;&nbsp;
+            <button mat-raised-button color="primary">Fourth</button>&nbsp;&nbsp;
+          </li>
+        </ul>
+    </div> -->
+
+    <!--<ul class="derecha">
+      <li class="li-navbar">
+        <a mat-menu-item [routerLink]="nav.route" *ngFor="let nav of menuNav" style="color: white">
+          <mat-icon style="color: white">{{nav.icon}} </mat-icon>
+          {{nav.name}}
+        </a>
+      </li>
+    </ul> -->
+
+    <div class="derecha">
+      <ul>
+        <li class="li-navbar">
+          <a mat-menu-item [routerLink]="nav.route" *ngFor="let nav of menuNav"  style="color: white">
+            <mat-icon class="center" style="color: white">{{nav.icon}} </mat-icon>
+            {{nav.name}}
+          </a>
+        </li>
+
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>power_settings_new</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <mat-icon>exit_to_app</mat-icon>
+            Cerrar sesión
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar>
+
+  <!--EMPIEZA SIDENAV-CONTENT-->
+
+
+  <router-outlet></router-outlet>
+</div>
+

@@ -1,0 +1,87 @@
+.dashboard-container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+h1.app-name{
+  margin-left: 8px;
+  margin-top: 15px;
+}
+
+.sidenav-container{
+  flex: 1;
+
+}
+
+.li-navbar{
+  display: flex;
+  width: 800px;
+  clear: left;
+  text-align: center;
+  vertical-align: middle;
+  height: 50px;
+}
+
+.is-mobile .sidenav-container{
+  flex: 1 0 auto;
+
+}
+
+ul li{/*SE PONE SEPARADO Y ES PORQUE HACE REFERECENCIA QUE ES UN LENGUAJE NATIVO DE HTML Y POR DEFECTO LES VA APLICAR EL ESTILO CADA VEZ QUE LOS ENCUENTRE*/
+  list-style: none;
+
+}
+
+div ul{/*SE PONE SEPARADO Y ES PORQUE HACE REFERECENCIA QUE ES UN LENGUAJE NATIVO DE HTML Y POR DEFECTO LES VA APLICAR EL ESTILO CADA VEZ QUE LOS ENCUENTRE*/
+  display: flex;
+  align-items: center;
+}
+
+.derecha{
+  margin-left: auto;
+
+}
+
+.perfil-card{
+  text-align: center;
+  padding: 0 10px 10px 10px;
+
+}
+
+.header{
+  margin-top: 20px;
+}
+
+.icono{
+  margin-right: 10px;
+  margin-top: 10px;
+  align-items: stretch;
+}
+.demo-text{
+  clear: left;
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  left: 50px;
+  margin-right: 1px;
+  margin-left: 100px;
+  padding: 1px 0 1px 1px;
+
+}
+
+.iconos-menu{
+  left: 50px;
+  align-items: stretch;
+  clear: left;
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+}
+
+.center{
+  float: left;
+  text-align: center;
+  height: 27px;
+  vertical-align: middle;
+}
