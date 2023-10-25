@@ -8,9 +8,15 @@ import { Component } from '@angular/core';
 export class SidenavComponent {
 
   menuNav=[
-    {name: "Home", route: "home", icon: "home"},
-    {name: "Usuarios", route: "usuario", icon: "assignment_ind"},
-    {name: "Medicamentos", route: "medicamento", icon: "assignment"},
+    {name: "CLINICAL S.A.S ", route: "", icon: "home"},
+  ]
+
+  menuNav2 =[
+    {name: "USUARIOS", route: "user", icon: "assignment_ind"},
+  ]
+
+  menuNav3 = [
+    {name: "MEDICAMENTOS", route: "medicine", icon: "assignment"},
   ]
 
 

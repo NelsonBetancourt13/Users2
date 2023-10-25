@@ -64,14 +64,13 @@ div ul{/*SE PONE SEPARADO Y ES PORQUE HACE REFERECENCIA QUE ES UN LENGUAJE NATIV
   vertical-align: middle;
   height: 30px;
   left: 50px;
-  margin-right: 1px;
-  margin-left: 100px;
-  padding: 1px 0 1px 1px;
+  margin-right: 4px;
+  margin-left: 1px;
 
 }
 
 .iconos-menu{
-  left: 50px;
+  left: 510px;
   align-items: stretch;
   clear: left;
   text-align: center;
@@ -82,6 +81,20 @@ div ul{/*SE PONE SEPARADO Y ES PORQUE HACE REFERECENCIA QUE ES UN LENGUAJE NATIV
 .center{
   float: left;
   text-align: center;
-  height: 27px;
+  height: 20px;
   vertical-align: middle;
+  padding: 1px 10px 10px 10px;
+
+
 }
+
+.icono-clinical{
+
+  text-align: center;
+  vertical-align: middle;
+  height: 40px;
+  left: 1px;
+
+
+}
+
