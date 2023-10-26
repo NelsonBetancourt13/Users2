@@ -1,7 +1,9 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {UserService} from "../../../Share/Services/user.service";
 import {MatTableDataSource} from "@angular/material/table";
-import {elementAt} from "rxjs";
+import {MatDialog} from "@angular/material/dialog";
+import {NewUserComponent} from "../new-user/new-user.component";
+import {MatSnackBar, MatSnackBarRef, SimpleSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-user',
@@ -12,8 +14,9 @@ import {elementAt} from "rxjs";
 
 export class UserComponent implements OnInit{
 
-
+  private snackBar = inject(MatSnackBar);
   private userService = inject(UserService);
+  public dialog = inject(MatDialog);
 
   ngOnInit(): void {
    return  this.getUsers();
@@ -55,6 +58,33 @@ export class UserComponent implements OnInit{
       this.dataSource = new MatTableDataSource<UserElement>(dataUsers);
 
     });
+
+  }
+
+  openUserDialog(){
+
+    const dialogRef = this.dialog.open(NewUserComponent , {
+      width: '450px'
+    });
+
+    dialogRef.afterClosed().subscribe((result:any )=> {
+
+      if (result == 1){
+        this.openSnackBar("Usuario Agregado","Exitoso");
+        this.getUsers();
+      }else if (result == 2){
+        this.openSnackBar("Error al guardar el Usuario","Error");
+      }
+
+    });
+  }
+
+
+  openSnackBar(message:string, action: string): MatSnackBarRef<SimpleSnackBar>{
+
+    return this.snackBar.open(message, action,{
+        duration: 2000
+    })
 
   }
 

@@ -20,6 +20,14 @@ export class UserService {
     const endpoint = `${base_url}/List`;
     return this.http.get(endpoint);
 
+    }
+
+    //METODO PARA GUARDAR UN USUARIO CONSUMIENDO LA API-REST
+
+    saveUser(body:any){
+
+      const endpoint = `${base_url}/New`;
+      return this.http.post(endpoint,body);
 
     }
 
