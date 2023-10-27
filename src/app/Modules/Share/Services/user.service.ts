@@ -32,4 +32,21 @@ export class UserService {
     }
 
 
+    //METODO ACTUALIZAR USUARIOS
+
+    updateUser(body: any, id: any){
+
+      const endpoint = `${base_url}/Update/${id}`;
+      return this.http.put(endpoint,body);
+
+    }
+
+
+    eliminarUser(id:any){
+
+      const endpoint = `${base_url}/Delete/${id}`;
+      return this.http.delete(endpoint);
+
+    }
+
 }

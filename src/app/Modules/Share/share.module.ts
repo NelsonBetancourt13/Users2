@@ -4,12 +4,14 @@ import { SidenavComponent } from './Component/sidenav/sidenav.component';
 import {RouterModule} from "@angular/router";
 import {MaterialModule} from "./angular.module";
 import {HttpClientModule} from "@angular/common/http";
+import { EliminarComponent } from './Component/eliminar/eliminar.component';
 
 
 
 @NgModule({
   declarations: [
-    SidenavComponent
+    SidenavComponent,
+    EliminarComponent
   ],
   exports:[
     SidenavComponent
